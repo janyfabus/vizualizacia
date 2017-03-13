@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Vizualizacia podobnosti</title>
-    <script type="text/javascript" src="prepare_data.js.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
-
+	<script type="text/javascript">
+		$.post("http://localhost:3000/getData", function(data){
+			document.body.innerHTML = data.stack;
+			console.log(data.tokenizeArray);
+		}, "json");
+	</script>
 </body>
 </html>
